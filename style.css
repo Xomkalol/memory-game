@@ -40,6 +40,9 @@
 @media screen and (max-width: 767px) {
   body {
     background-color: var(--color-bg);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
   }
   header {
     display: flex;
@@ -111,6 +114,9 @@
 @media screen and (max-width: 767px) {
   main {
     margin-top: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   main .main__score-container {
     width: 100%;
@@ -173,7 +179,23 @@
 }
 @media screen and (max-width: 767px) {
   main section {
-    padding: 0.5rem;
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  main section .grid__container {
+    width: 100%;
+    max-width: fit-content;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+  main section .grid__container .card {
+    width: 5rem;
+    aspect-ratio: 3/4;
+    border: 1px solid red;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -313,6 +335,7 @@
 @media screen and (min-width: 1440px) {
   body {
     background-color: var(--color-bg);
+    min-height: 100dvh;
   }
   header {
     display: flex;

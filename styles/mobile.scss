@@ -5,6 +5,10 @@
 @media screen and (max-width: 767px) {
   body {
     background-color: var(--color-bg);
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
   }
 
   header {
@@ -48,6 +52,9 @@
 
   main {
     margin-top: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     .main__score-container {
       width: 100%;
       display: flex;
@@ -94,7 +101,25 @@
     }
 
     section {
-      padding: 0.5rem;
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      .grid__container {
+        width: 100%;
+        max-width: fit-content;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+
+        .card {
+          width: 5rem;
+          aspect-ratio: 3 / 4;
+          border: 1px solid red;
+        }
+      }
     }
   }
 }
