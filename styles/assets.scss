@@ -1,0 +1,16 @@
+@use "variables";
+
+@mixin button {
+  @media screen and (max-width: 767px) {
+    border: solid 1px;
+    border-color: var(--color-border);
+    padding: 0.5rem;
+    border-radius: 25px;
+    pointer: cursor;
+
+    &:hover {
+      color: var(--color-primary-hover);
+      background-color: var(--color-bg-hover);
+    }
+  }
+}

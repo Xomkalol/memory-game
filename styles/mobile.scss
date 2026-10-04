@@ -1,0 +1,48 @@
+@use "variables";
+@use "assets";
+
+// 380px
+@media screen and (max-width: 767px) {
+  body {
+    background-color: var(--color-bg);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+    padding: 1rem;
+    box-shadow: 0 2px 12px rgb(15 23 42 / 6%);
+
+    .header__name-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    span {
+      @include variables.header-2;
+    }
+
+    .pokeball__image-container {
+      width: 40px;
+      height: 40px;
+    }
+
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .header__action-container {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      div {
+        @include variables.actions-button;
+        @include assets.button;
+      }
+    }
+  }
+}

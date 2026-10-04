@@ -1,0 +1,49 @@
+:root {
+  --color-bg: #f4f7fb;
+  --color-bg-hover: #e2e5e9;
+
+  --color-primary: #e3350d;
+  --color-primary-hover: #c92d0b;
+
+  --color-text: #1f2937;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+
+  --color-border: #dce4ec;
+  --color-border-light: #e8eef4;
+}
+
+$font-family: Nunito;
+
+@mixin header-2 {
+  font-weight: 800;
+  font-family: $font-family;
+  font-size: 2rem;
+  color: var(--color-primary);
+
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
+}
+
+@mixin actions-button {
+  font-weight: 700;
+  font-family: $font-family;
+  color: var(--color-primary);
+  font-size: 1rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.75rem;
+  }
+}
+
+@mixin text {
+  font-weight: 600;
+  font-family: $font-family;
+  color: var(--color-text);
+  font-size: 1rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.75rem;
+  }
+}

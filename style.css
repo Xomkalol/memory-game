@@ -4,4 +4,85 @@
   padding: 0;
 }
 
+:root {
+  --color-bg: #f4f7fb;
+  --color-bg-hover: #e2e5e9;
+  --color-primary: #e3350d;
+  --color-primary-hover: #c92d0b;
+  --color-text: #1f2937;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-border: #dce4ec;
+  --color-border-light: #e8eef4;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-color: var(--color-bg);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+    padding: 1rem;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  }
+  header .header__name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  header span {
+    font-weight: 800;
+    font-family: Nunito;
+    font-size: 2rem;
+    color: var(--color-primary);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  header span {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .pokeball__image-container {
+    width: 40px;
+    height: 40px;
+  }
+  header img {
+    object-fit: contain;
+    width: 100%;
+  }
+  header .header__action-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  header .header__action-container div {
+    font-weight: 700;
+    font-family: Nunito;
+    color: var(--color-primary);
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  header .header__action-container div {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  header .header__action-container div {
+    border: solid 1px;
+    border-color: var(--color-border);
+    padding: 0.5rem;
+    border-radius: 25px;
+    pointer: cursor;
+  }
+  header .header__action-container div:hover {
+    color: var(--color-primary-hover);
+    background-color: var(--color-bg-hover);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
