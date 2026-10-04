@@ -78,6 +78,11 @@
 
           div {
             color: var(--color-primary);
+            cursor: pointer;
+          }
+
+          div:hover {
+            color: var(--color-primary-hover);
           }
         }
       }

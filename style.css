@@ -154,6 +154,10 @@
   }
   main .main__score-container .counter__container .counter__text-container div {
     color: var(--color-primary);
+    cursor: pointer;
+  }
+  main .main__score-container .counter__container .counter__text-container div:hover {
+    color: var(--color-primary-hover);
   }
   main .main__score-container .score__container {
     width: 8rem;
@@ -357,6 +361,10 @@
   }
   main .main__score-container .counter__container .counter__text-container div {
     color: var(--color-primary);
+    cursor: pointer;
+  }
+  main .main__score-container .counter__container .counter__text-container div:hover {
+    color: var(--color-primary-hover);
   }
   main .main__score-container .score__container {
     width: 8rem;
@@ -555,6 +563,10 @@
   }
   main .main__score-container .counter__container .counter__text-container div {
     color: var(--color-primary);
+    cursor: pointer;
+  }
+  main .main__score-container .counter__container .counter__text-container div:hover {
+    color: var(--color-primary-hover);
   }
   main .main__score-container .score__container {
     width: 10rem;
