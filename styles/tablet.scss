@@ -116,7 +116,51 @@
         .card {
           width: 7rem;
           aspect-ratio: 1;
-          border: 1px solid red;
+          border: 2px solid rgb(14, 13, 13);
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background:
+            linear-gradient(
+              135deg,
+              transparent 0%,
+              transparent 35%,
+              rgb(255 255 255 / 8%) 35%,
+              rgb(255 255 255 / 8%) 45%,
+              transparent 45%,
+              transparent 65%,
+              rgb(255 255 255 / 5%) 65%,
+              rgb(255 255 255 / 5%) 75%,
+              transparent 75%
+            ),
+            linear-gradient(135deg, #f04432 0%, #e3350d 50%, #c92d0b 100%);
+
+          img {
+            width: 40px;
+            aspect-ratio: 1;
+          }
+        }
+
+        .card:hover {
+          cursor: pointer;
+          background:
+            linear-gradient(
+              135deg,
+              transparent 0%,
+              transparent 35%,
+              rgb(255 255 255 / 10%) 35%,
+              rgb(255 255 255 / 10%) 45%,
+              transparent 45%,
+              transparent 65%,
+              rgb(255 255 255 / 7%) 65%,
+              rgb(255 255 255 / 7%) 75%,
+              transparent 75%
+            ),
+            linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
+
+          transform: translateY(-2px);
+          box-shadow: 0 8px 18px rgb(15 23 42 / 15%);
         }
       }
     }

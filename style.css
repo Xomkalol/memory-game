@@ -196,7 +196,27 @@
   main section .grid__container .card {
     width: 5rem;
     aspect-ratio: 3/4;
-    border: 1px solid red;
+    border: 2px solid rgb(14, 13, 13);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.08) 35%, rgba(255, 255, 255, 0.08) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.05) 65%, rgba(255, 255, 255, 0.05) 75%, transparent 75%), linear-gradient(135deg, #f04432 0%, #e3350d 50%, #c92d0b 100%);
+  }
+  main section .grid__container .card .card:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.1) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.07) 65%, rgba(255, 255, 255, 0.07) 75%, transparent 75%), linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+  }
+  main section .grid__container .card img {
+    width: 40px;
+    aspect-ratio: 1;
+  }
+  main section .grid__container .card:hover {
+    background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.1) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.07) 65%, rgba(255, 255, 255, 0.07) 75%, transparent 75%), linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
   }
   footer {
     background-color: var(--color-surface-soft);
@@ -378,7 +398,22 @@
   main section .grid__container .card {
     width: 7rem;
     aspect-ratio: 1;
-    border: 1px solid red;
+    border: 2px solid rgb(14, 13, 13);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.08) 35%, rgba(255, 255, 255, 0.08) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.05) 65%, rgba(255, 255, 255, 0.05) 75%, transparent 75%), linear-gradient(135deg, #f04432 0%, #e3350d 50%, #c92d0b 100%);
+  }
+  main section .grid__container .card img {
+    width: 40px;
+    aspect-ratio: 1;
+  }
+  main section .grid__container .card:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.1) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.07) 65%, rgba(255, 255, 255, 0.07) 75%, transparent 75%), linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
   }
   footer {
     background-color: var(--color-surface-soft);
@@ -560,7 +595,22 @@
   main section .grid__container .card {
     width: 7rem;
     aspect-ratio: 1;
-    border: 1px solid red;
+    border: 2px solid rgb(14, 13, 13);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.08) 35%, rgba(255, 255, 255, 0.08) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.05) 65%, rgba(255, 255, 255, 0.05) 75%, transparent 75%), linear-gradient(135deg, #f04432 0%, #e3350d 50%, #c92d0b 100%);
+  }
+  main section .grid__container .card img {
+    width: 40px;
+    aspect-ratio: 1;
+  }
+  main section .grid__container .card:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.1) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.07) 65%, rgba(255, 255, 255, 0.07) 75%, transparent 75%), linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
   }
   footer {
     background-color: var(--color-surface-soft);
