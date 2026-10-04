@@ -158,5 +158,76 @@
     padding: 0.5rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: var(--color-bg);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  }
+  header .header__name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  header span {
+    font-weight: 800;
+    font-family: Nunito;
+    font-size: 2rem;
+    color: var(--color-primary);
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 767px) {
+  header span {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header .pokeball__image-container {
+    width: 50px;
+    height: 50px;
+  }
+  header img {
+    object-fit: contain;
+    width: 100%;
+  }
+  header .header__action-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  header .header__action-container div {
+    font-weight: 700;
+    font-family: Nunito;
+    color: var(--color-primary);
+    font-size: 1rem;
+    border: solid 1px;
+    border-color: var(--color-border);
+    padding: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 767px) {
+  header .header__action-container div {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header .header__action-container div:hover {
+    color: var(--color-primary-hover);
+    background-color: var(--color-bg-hover);
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 767px) {
+  header .header__action-container div {
+    padding: 0.5rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
