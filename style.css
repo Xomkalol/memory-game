@@ -37,7 +37,7 @@
   --shadow-modal: 0 20px 50px rgb(15 23 42 / 20%);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   body {
     background-color: var(--color-bg);
     min-height: 100dvh;
@@ -64,12 +64,12 @@
     color: var(--color-primary);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 767px) {
+@media screen and (max-width: 768px) and (max-width: 767px) {
   header h1 {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   header .pokeball__image-container {
     width: 40px;
     height: 40px;
@@ -95,23 +95,23 @@
     cursor: pointer;
   }
 }
-@media screen and (max-width: 767px) and (max-width: 767px) {
+@media screen and (max-width: 768px) and (max-width: 767px) {
   header .header__action-container div {
     font-size: 0.75rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   header .header__action-container div:hover {
     color: var(--color-primary-hover);
     background-color: var(--color-bg-hover);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 767px) {
+@media screen and (max-width: 768px) and (max-width: 767px) {
   header .header__action-container div {
     padding: 0.5rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   main {
     margin-top: 2rem;
     flex: 1;
@@ -138,12 +138,12 @@
     color: var(--color-text);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 767px) {
+@media screen and (max-width: 768px) and (max-width: 767px) {
   main .main__score-container .counter__container {
     font-size: 0.75rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   main .main__score-container .counter__container .counter__text-container {
     display: flex;
     flex-direction: column;
@@ -172,12 +172,12 @@
     color: var(--color-text);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 767px) {
+@media screen and (max-width: 768px) and (max-width: 767px) {
   main .main__score-container .score__container {
     font-size: 0.75rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   main section {
     padding: 1.5rem;
     flex: 1;
@@ -210,12 +210,12 @@
     color: var(--color-primary);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 767px) {
+@media screen and (max-width: 768px) and (max-width: 767px) {
   footer {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   footer div img {
     width: 40px;
     height: 40px;
