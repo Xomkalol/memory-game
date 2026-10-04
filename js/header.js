@@ -1,2 +1,2 @@
-const header = "";
-header;
+const header = document.createElement("header");
+export default header;

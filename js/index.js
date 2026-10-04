@@ -1,3 +1,4 @@
-import header from "header.js";
+import header from "./header.js";
 
-header;
+const body = document.body;
+body.appendChild(header);
