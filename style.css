@@ -54,7 +54,7 @@
     align-items: center;
     gap: 0.5rem;
   }
-  header span {
+  header h1 {
     font-weight: 800;
     font-family: Nunito;
     font-size: 2rem;
@@ -62,7 +62,7 @@
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
-  header span {
+  header h1 {
     font-size: 1rem;
   }
 }
@@ -193,7 +193,7 @@
     align-items: center;
     gap: 0.5rem;
   }
-  header span {
+  header h1 {
     font-weight: 800;
     font-family: Nunito;
     font-size: 2rem;
@@ -201,7 +201,7 @@
   }
 }
 @media screen and (max-width: 1440px) and (max-width: 767px) {
-  header span {
+  header h1 {
     font-size: 1rem;
   }
 }
