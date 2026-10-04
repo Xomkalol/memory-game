@@ -117,14 +117,27 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 5px;
 
-        .card {
+        .card__container {
+          perspective: 1000px;
+        }
+
+        .card__inner {
           width: 7rem;
           aspect-ratio: 1;
+          transform: rotateY(180deg);
+          transform-style: preserve-3d;
+          position: relative;
+        }
+
+        .card {
+          position: absolute;
+          inset: 0;
           border: 2px solid rgb(14, 13, 13);
           border-radius: 15px;
           display: flex;
           justify-content: center;
           align-items: center;
+          backface-visibility: hidden;
           background:
             linear-gradient(
               135deg,
@@ -147,6 +160,14 @@
           }
         }
 
+        .card__back {
+          position: absolute;
+          inset: 0;
+          background-color: red;
+          backface-visibility: hidden;
+          transform: rotateY(180deg);
+        }
+
         .card:hover {
           cursor: pointer;
           background:
@@ -164,7 +185,7 @@
             ),
             linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
 
-          transform: translateY(-2px);
+          //    transform: translateY(-2px);
           box-shadow: 0 8px 18px rgb(15 23 42 / 15%);
         }
       }
