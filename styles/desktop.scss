@@ -45,4 +45,52 @@
       }
     }
   }
+
+  main {
+    margin-top: 2rem;
+    .main__score-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .counter__container {
+        width: 10rem;
+        height: 5rem;
+        padding: 0.5rem;
+        background-color: var(--color-primary-light);
+        border-radius: 10px;
+        @include variables.actions-button;
+        color: var(--color-text);
+
+        .counter__text-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+
+          div {
+            color: var(--color-primary);
+          }
+        }
+      }
+
+      .score__container {
+        width: 10rem;
+        height: 5rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--color-accent-light);
+        border-radius: 10px;
+        @include variables.actions-button;
+        color: var(--color-text);
+      }
+    }
+  }
 }

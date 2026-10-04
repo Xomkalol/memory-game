@@ -376,5 +376,68 @@
     padding: 0.5rem;
   }
 }
+@media screen and (min-width: 1440px) {
+  main {
+    margin-top: 2rem;
+  }
+  main .main__score-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  main .main__score-container .counter__container {
+    width: 10rem;
+    height: 5rem;
+    padding: 0.5rem;
+    background-color: var(--color-primary-light);
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: Nunito;
+    color: var(--color-primary);
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 767px) {
+  main .main__score-container .counter__container {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .main__score-container .counter__container .counter__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  main .main__score-container .counter__container .counter__text-container div {
+    color: var(--color-primary);
+  }
+  main .main__score-container .score__container {
+    width: 10rem;
+    height: 5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-accent-light);
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: Nunito;
+    color: var(--color-primary);
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 767px) {
+  main .main__score-container .score__container {
+    font-size: 0.75rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
