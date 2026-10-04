@@ -171,6 +171,11 @@
     font-size: 0.75rem;
   }
 }
+@media screen and (max-width: 767px) {
+  main section {
+    padding: 0.5rem;
+  }
+}
 @media screen and (max-width: 1440px) {
   body {
     background-color: var(--color-bg);

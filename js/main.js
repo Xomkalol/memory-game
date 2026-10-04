@@ -1,6 +1,8 @@
 const main = document.createElement("main");
 export default main;
 
+import grid from "./grid.js";
+
 //sectionScore
 const sectionScore = document.createElement("div");
 sectionScore.classList.add("main__score-container");
@@ -36,3 +38,5 @@ scoreContainer.appendChild(scoreText);
 const scoreNumbers = document.createElement("span");
 scoreNumbers.innerText = "0 / 0";
 scoreContainer.appendChild(scoreNumbers);
+
+main.appendChild(grid);
