@@ -212,6 +212,7 @@
   main section .grid__container .card img {
     width: 40px;
     aspect-ratio: 1;
+    user-select: none;
   }
   main section .grid__container .card:hover {
     background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.1) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.07) 65%, rgba(255, 255, 255, 0.07) 75%, transparent 75%), linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
@@ -408,6 +409,7 @@
   main section .grid__container .card img {
     width: 40px;
     aspect-ratio: 1;
+    user-select: none;
   }
   main section .grid__container .card:hover {
     cursor: pointer;
@@ -605,6 +607,7 @@
   main section .grid__container .card img {
     width: 40px;
     aspect-ratio: 1;
+    user-select: none;
   }
   main section .grid__container .card:hover {
     cursor: pointer;
