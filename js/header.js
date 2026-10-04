@@ -6,7 +6,7 @@ const gameNameContainer = document.createElement("div");
 gameNameContainer.classList.add("header__name-container");
 header.appendChild(gameNameContainer);
 
-const gameName = document.createElement("span");
+const gameName = document.createElement("h1");
 gameName.textContent = "Pokememory";
 gameNameContainer.appendChild(gameName);
 
