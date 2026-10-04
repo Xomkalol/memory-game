@@ -122,4 +122,21 @@
       }
     }
   }
+
+  footer {
+    background-color: var(--color-surface-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    min-height: 80px;
+    @include variables.header-2;
+
+    div {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
 }
