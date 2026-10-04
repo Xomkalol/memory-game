@@ -361,6 +361,8 @@
   body {
     background-color: var(--color-bg);
     min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
   }
   header {
     display: flex;
@@ -432,6 +434,7 @@
 @media screen and (min-width: 1440px) {
   main {
     margin-top: 2rem;
+    flex: 1;
   }
   main .main__score-container {
     width: 100%;
@@ -490,6 +493,27 @@
 @media screen and (min-width: 1440px) and (max-width: 767px) {
   main .main__score-container .score__container {
     font-size: 0.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  main section .grid__container {
+    width: 100%;
+    max-width: fit-content;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+  main section .grid__container .card {
+    width: 7rem;
+    aspect-ratio: 1;
+    border: 1px solid red;
   }
 }
 

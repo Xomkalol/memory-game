@@ -6,6 +6,9 @@
   body {
     background-color: var(--color-bg);
     min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
   }
 
   header {
@@ -49,6 +52,7 @@
 
   main {
     margin-top: 2rem;
+    flex: 1;
     .main__score-container {
       width: 100%;
       display: flex;
@@ -91,6 +95,28 @@
         border-radius: 10px;
         @include variables.actions-button;
         color: var(--color-text);
+      }
+    }
+
+    section {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      .grid__container {
+        width: 100%;
+        max-width: fit-content;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+
+        .card {
+          width: 7rem;
+          aspect-ratio: 1;
+          border: 1px solid red;
+        }
       }
     }
   }
