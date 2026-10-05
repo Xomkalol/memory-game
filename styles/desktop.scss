@@ -167,9 +167,25 @@
         .card__back {
           position: absolute;
           inset: 0;
-          background-color: red;
           backface-visibility: hidden;
           transform: rotateY(180deg);
+          border: 2px solid rgb(14, 13, 13);
+          border-radius: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+
+          img {
+            width: 40px;
+            aspect-ratio: 1;
+          }
+
+          span {
+            @include variables.text;
+          }
         }
 
         .card:hover {

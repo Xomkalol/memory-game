@@ -43,12 +43,15 @@ const createCardsWith = (gridContainer, pokemon) => {
 
     const backCard = document.createElement("div");
     backCard.classList.add("card__back");
-    backCard.textContent = `${pokemonArray[i].name}`;
 
     const pokemonImg = document.createElement("img");
     pokemonImg.alt = `${pokemonArray[i].name} image`;
     pokemonImg.src = `${pokemonArray[i].image}`;
     backCard.appendChild(pokemonImg);
+
+    const backCardText = document.createElement("span");
+    backCardText.textContent = `${pokemonArray[i].name}`;
+    backCard.appendChild(backCardText);
     inner.appendChild(backCard);
   }
 };

@@ -126,9 +126,13 @@
         .card__inner {
           width: 5rem;
           aspect-ratio: 3 / 4;
-          transform: rotateY(180deg);
+          transform: rotateY(0deg);
           transform-style: preserve-3d;
           position: relative;
+        }
+
+        .card__inner.active {
+          transform: rotateY(180deg);
         }
 
         .card {
@@ -188,9 +192,23 @@
           inset: 0;
           border: 2px solid rgb(14, 13, 13);
           border-radius: 15px;
-          background-color: var(--color-bg);
           backface-visibility: hidden;
           transform: rotateY(180deg);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+
+          img {
+            width: 40px;
+            aspect-ratio: 1;
+          }
+
+          span {
+            @include variables.text;
+          }
         }
 
         .card:hover {

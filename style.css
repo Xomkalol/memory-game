@@ -203,9 +203,12 @@
   main section .grid__container .card__inner {
     width: 5rem;
     aspect-ratio: 3/4;
-    transform: rotateY(180deg);
+    transform: rotateY(0deg);
     transform-style: preserve-3d;
     position: relative;
+  }
+  main section .grid__container .card__inner.active {
+    transform: rotateY(180deg);
   }
   main section .grid__container .card {
     position: absolute;
@@ -234,10 +237,32 @@
     inset: 0;
     border: 2px solid rgb(14, 13, 13);
     border-radius: 15px;
-    background-color: var(--color-bg);
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
   }
+  main section .grid__container .card__back img {
+    width: 40px;
+    aspect-ratio: 1;
+  }
+  main section .grid__container .card__back span {
+    font-weight: 600;
+    font-family: Nunito;
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 767px) {
+  main section .grid__container .card__back span {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
   main section .grid__container .card:hover {
     background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.1) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.07) 65%, rgba(255, 255, 255, 0.07) 75%, transparent 75%), linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
     transform: translateY(-2px);
@@ -430,9 +455,12 @@
   main section .grid__container .card__inner {
     width: 7rem;
     aspect-ratio: 1;
-    transform: rotateY(180deg);
+    transform: rotateY(0deg);
     transform-style: preserve-3d;
     position: relative;
+  }
+  main section .grid__container .card__inner.active {
+    transform: rotateY(180deg);
   }
   main section .grid__container .card {
     position: absolute;
@@ -453,10 +481,34 @@
   main section .grid__container .card__back {
     position: absolute;
     inset: 0;
-    background-color: red;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    border: 2px solid rgb(14, 13, 13);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
   }
+  main section .grid__container .card__back img {
+    width: 40px;
+    aspect-ratio: 1;
+  }
+  main section .grid__container .card__back span {
+    font-weight: 600;
+    font-family: Nunito;
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1440px) and (min-width: 768px) and (max-width: 767px) {
+  main section .grid__container .card__back span {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 1440px) and (min-width: 768px) {
   main section .grid__container .card:hover {
     cursor: pointer;
     background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.1) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.07) 65%, rgba(255, 255, 255, 0.07) 75%, transparent 75%), linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
@@ -676,10 +728,34 @@
   main section .grid__container .card__back {
     position: absolute;
     inset: 0;
-    background-color: red;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    border: 2px solid rgb(14, 13, 13);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
   }
+  main section .grid__container .card__back img {
+    width: 40px;
+    aspect-ratio: 1;
+  }
+  main section .grid__container .card__back span {
+    font-weight: 600;
+    font-family: Nunito;
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 767px) {
+  main section .grid__container .card__back span {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (min-width: 1440px) {
   main section .grid__container .card:hover {
     cursor: pointer;
     background: linear-gradient(135deg, transparent 0%, transparent 35%, rgba(255, 255, 255, 0.1) 35%, rgba(255, 255, 255, 0.1) 45%, transparent 45%, transparent 65%, rgba(255, 255, 255, 0.07) 65%, rgba(255, 255, 255, 0.07) 75%, transparent 75%), linear-gradient(135deg, #f65342 0%, #e9431c 50%, #b92709 100%);
