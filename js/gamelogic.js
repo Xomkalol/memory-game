@@ -7,7 +7,7 @@ function initGame() {
     card.addEventListener("click", (event) => {
       console.log("click");
       const inner = event.currentTarget.querySelector(".card__inner");
-      inner.classList.add("active");
+      inner.classList.toggle("active");
     });
   }
 
