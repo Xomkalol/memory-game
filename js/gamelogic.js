@@ -7,7 +7,45 @@ import {
 } from "./setupHandlers.js";
 
 function initGame() {
-  setUpHandlerforCards();
+  // let pairsCounter = 0;
+  // let score = 0;
+  let firstCard = "";
+  let secondCard = "";
+
+  function handleCardClick(card) {
+    const inner = card.querySelector(".card__inner");
+    inner.classList.toggle("active");
+
+    if (firstCard === "") {
+      const firstPokemonId = card.dataset.pokemonId;
+      firstCard = firstPokemonId;
+      console.log("Это первая карточка", firstPokemonId);
+      return;
+    }
+    const secondPokemonId = card.dataset.pokemonId;
+    secondCard = secondPokemonId;
+    console.log("Это вторая карточка", secondPokemonId);
+
+    if (firstCard == secondCard) {
+      console.log("Это пара!");
+    } else {
+      console.log("Это не пара!");
+    }
+    firstCard = "";
+    secondCard = "";
+    resetActiveCards();
+    return;
+  }
+
+  function resetActiveCards() {
+    const gridContainer = document.querySelector(".grid__container");
+    const activeCards = gridContainer.querySelectorAll(".active");
+
+    activeCards.forEach((card) => {
+      card.classList.toggle("active");
+    });
+  }
+  setUpHandlerforCards(handleCardClick);
   setUpHandlerNewGame();
   setUpHandlerLeaderBoard();
   setUpHandlerReset();
@@ -35,6 +73,7 @@ const createCardsWith = (gridContainer, pokemon) => {
 
   for (let i = 0; i < pokemonArray.length; i += 1) {
     const cardContainer = document.createElement("div");
+    cardContainer.dataset.pokemonId = pokemonArray[i].id;
     cardContainer.classList.add("card__container");
     gridContainer.appendChild(cardContainer);
 
@@ -64,4 +103,35 @@ const createCardsWith = (gridContainer, pokemon) => {
     inner.appendChild(backCard);
   }
 };
+
 export { createCardsWith };
+
+/* 1. initGame
+   ↓
+2. состояние игры
+   ↓
+3. клик по первой карточке
+   ↓
+4. клик по второй карточке
+   ↓
+5. проверка пары
+   ↓
+6. блокировка + таймер для несовпадения
+   ↓
+7. счётчик ходов
+   ↓
+8. счётчик найденных пар
+   ↓
+9. проверка победы
+   ↓
+10. finishGame
+   ↓
+11. victory modal
+   ↓
+12. startNewGame
+   ↓
+13. localStorage результатов
+   ↓
+14. leaderboard
+   ↓
+15. общий механизм модалок */
