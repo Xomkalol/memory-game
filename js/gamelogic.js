@@ -54,6 +54,7 @@ function initGame() {
       firstCard = "";
       secondCard = "";
       isLocked = false;
+      checkWinGame();
       return;
     } else {
       console.log("Это не пара!");
@@ -66,6 +67,7 @@ function initGame() {
       moves++;
       setUpmoves(moves);
       resetActiveCards();
+      checkWinGame();
     }, 1000);
     return;
   }
@@ -80,6 +82,13 @@ function initGame() {
         card.classList.toggle("active");
       }
     });
+  }
+
+  function checkWinGame() {
+    if (score === 8) {
+      console.log("YOU WON!");
+      isLocked = true;
+    }
   }
   setUpHandlerforCards(handleCardClick);
   setUpHandlerNewGame();
