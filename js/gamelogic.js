@@ -33,7 +33,10 @@ function initGame() {
     }
     firstCard = "";
     secondCard = "";
-    resetActiveCards();
+
+    setTimeout(() => {
+      resetActiveCards();
+    }, 1000);
     return;
   }
 
