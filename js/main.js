@@ -21,10 +21,6 @@ const counterText = document.createElement("span");
 counterText.classList.add("counter__moves");
 counterTextContainer.appendChild(counterText);
 
-/* const counterResetButton = document.createElement("div");
-counterResetButton.classList.add("counter__reset-button");
-counterTextContainer.appendChild(counterResetButton); */
-
 // Score Container
 
 const scoreContainer = document.createElement("div");

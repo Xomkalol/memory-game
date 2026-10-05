@@ -43,9 +43,27 @@ function createModalContent(text, movesCounter, onNewGame) {
     const header = document.createElement("h2");
     header.textContent = "Leaders";
     content.appendChild(header);
-    const moves = document.createElement("span");
-    moves.textContent = `There are no leaders yet`;
-    content.appendChild(moves);
+
+    const results = JSON.parse(localStorage.getItem("gameResults"));
+
+    if (!results) {
+      const moves = document.createElement("span");
+      moves.textContent = `There are no leaders yet`;
+      content.appendChild(moves);
+      modal.appendChild(content);
+    } else {
+      const leaderBoardContainer = document.createElement("ul");
+      leaderBoardContainer.classList.add("leaderboard__container");
+      content.appendChild(leaderBoardContainer);
+      for (let i = 0; i < results.length; i++) {
+        const dateInObj = new Date(results[i].date);
+        const list = document.createElement("li");
+        const span = document.createElement("span");
+        span.innerText = `${i + 1} place: Date: ${dateInObj.getUTCFullYear()}-${dateInObj.getUTCMonth() + 1}-${dateInObj.getUTCDate()} - moves: ${results[i].moves}`;
+        list.appendChild(span);
+        leaderBoardContainer.appendChild(list);
+      }
+    }
     modal.appendChild(content);
   }
 

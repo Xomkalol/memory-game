@@ -68,7 +68,7 @@ function initGame() {
       moves++;
       setUpmoves(moves);
       resetActiveCards();
-      checkWinGame();
+      checkWinGame(moves);
     }, 1000);
     return;
   }
@@ -89,6 +89,7 @@ function initGame() {
     if (score === 8) {
       createModalContent("win", moves, newGame);
       isLocked = true;
+      saveResults(moves);
     }
   }
 
@@ -104,6 +105,38 @@ function initGame() {
     const gridContainer = document.querySelector(".grid__container");
     createCardsWith(gridContainer, pokemon);
     setUpHandlerforCards(handleCardClick);
+  }
+
+  function saveResults(moves) {
+    const results = JSON.parse(localStorage.getItem("gameResults"));
+    const dateNow = new Date().toISOString();
+    const currentResult = {
+      moves: moves,
+      date: dateNow,
+    };
+
+    if (!results) {
+      const newLeaderBoard = [];
+      newLeaderBoard.push(currentResult);
+      localStorage.setItem("gameResults", JSON.stringify(newLeaderBoard));
+      return;
+    }
+
+    results.push(currentResult);
+    results.sort((a, b) => {
+      if (a.moves !== b.moves) {
+        return a.moves - b.moves;
+      }
+
+      return new Date(b.date) - new Date(a.date);
+    });
+
+    if (results.length > 10) {
+      results.pop();
+    }
+
+    localStorage.setItem("gameResults", JSON.stringify(results));
+    return;
   }
   setUpHandlerforCards(handleCardClick);
   setUpHandlerNewGame(newGame);
