@@ -11,22 +11,28 @@ function initGame() {
   // let score = 0;
   let firstCard = "";
   let secondCard = "";
+  let isLocked = false;
 
   function handleCardClick(card) {
-    const inner = card.querySelector(".card__inner");
-    inner.classList.toggle("active");
-
-    if (firstCard === "") {
-      const firstPokemonId = card.dataset.pokemonId;
-      firstCard = firstPokemonId;
-      console.log("Это первая карточка", firstPokemonId);
+    if (isLocked) {
       return;
     }
-    const secondPokemonId = card.dataset.pokemonId;
-    secondCard = secondPokemonId;
-    console.log("Это вторая карточка", secondPokemonId);
+    const inner = card.querySelector(".card__inner");
+    inner.classList.add("active");
 
-    if (firstCard == secondCard) {
+    if (firstCard === "") {
+      firstCard = card;
+      console.log("Это первая карточка", firstCard);
+      return;
+    }
+    secondCard = card;
+    console.log("Это вторая карточка", secondCard);
+    if (firstCard === secondCard) {
+      return;
+    }
+    isLocked = true;
+
+    if (firstCard.dataset.pokemonId == secondCard.dataset.pokemonId) {
       console.log("Это пара!");
     } else {
       console.log("Это не пара!");
@@ -35,6 +41,7 @@ function initGame() {
     secondCard = "";
 
     setTimeout(() => {
+      isLocked = false;
       resetActiveCards();
     }, 1000);
     return;
