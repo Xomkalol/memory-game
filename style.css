@@ -845,4 +845,21 @@
   }
 }
 
+.modal__button {
+  border: solid 1px;
+  border-color: var(--color-border);
+  padding: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.modal__button:hover {
+  color: var(--color-primary-hover);
+  background-color: var(--color-bg-hover);
+}
+@media screen and (max-width: 767px) {
+  .modal__button {
+    padding: 0.5rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

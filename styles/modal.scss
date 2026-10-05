@@ -1,4 +1,5 @@
 @use "variables";
+@use "assets";
 
 .modal {
   position: fixed;
@@ -55,4 +56,8 @@
 
 .modal__content span {
   @include variables.text;
+}
+
+.modal__button {
+  @include assets.button;
 }

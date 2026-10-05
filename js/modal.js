@@ -5,6 +5,16 @@ modal.classList.add("modal");
 const content = document.createElement("div");
 content.classList.add("modal__content");
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    modal.classList.remove("active");
+  }
+});
+
+modal.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
 function createModalContent(text, movesCounter) {
   if (text === "win") {
     content.replaceChildren();
@@ -29,7 +39,21 @@ function createModalContent(text, movesCounter) {
   }
 
   modal.classList.add("active");
+
+  const closeButton = document.createElement("button");
+  closeButton.classList.add("modal__button");
+  closeButton.textContent = "Close";
+  content.appendChild(closeButton);
+
+  closeButton.addEventListener("click", () => {
+    closeModal();
+  });
+
   return;
+}
+
+function closeModal() {
+  modal.classList.remove("active");
 }
 
 export { createModalContent };
