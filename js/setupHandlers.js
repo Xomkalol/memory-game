@@ -1,3 +1,5 @@
+import { createModalContent } from "./modal.js";
+
 const setUpHandlerforCards = (handleCardClick) => {
   const container = document.querySelectorAll(".card__container");
 
@@ -25,15 +27,8 @@ const setUpHandlerLeaderBoard = () => {
   const leaderboardButton = document.querySelector(".action__leaderboard");
 
   leaderboardButton.addEventListener("click", () => {
+    createModalContent("leader", 0, () => {});
     console.log("view leaderBoard");
-  });
-};
-
-const setUpHandlerReset = () => {
-  const resetButton = document.querySelector(".counter__reset-button");
-
-  resetButton.addEventListener("click", () => {
-    console.log("reset game");
   });
 };
 
@@ -51,7 +46,6 @@ export {
   setUpHandlerforCards,
   setUpHandlerNewGame,
   setUpHandlerLeaderBoard,
-  setUpHandlerReset,
   setUpPairs,
   setUpmoves,
 };

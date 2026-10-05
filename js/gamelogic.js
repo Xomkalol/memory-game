@@ -3,7 +3,6 @@ import {
   setUpHandlerforCards,
   setUpHandlerNewGame,
   setUpHandlerLeaderBoard,
-  setUpHandlerReset,
   setUpPairs,
   setUpmoves,
 } from "./setupHandlers.js";
@@ -109,7 +108,6 @@ function initGame() {
   setUpHandlerforCards(handleCardClick);
   setUpHandlerNewGame(newGame);
   setUpHandlerLeaderBoard();
-  setUpHandlerReset();
   setUpPairs(score);
   setUpmoves(moves);
 }

@@ -21,10 +21,9 @@ const counterText = document.createElement("span");
 counterText.classList.add("counter__moves");
 counterTextContainer.appendChild(counterText);
 
-const counterResetButton = document.createElement("div");
+/* const counterResetButton = document.createElement("div");
 counterResetButton.classList.add("counter__reset-button");
-counterResetButton.innerText = "Reset";
-counterTextContainer.appendChild(counterResetButton);
+counterTextContainer.appendChild(counterResetButton); */
 
 // Score Container
 

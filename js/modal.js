@@ -2,10 +2,8 @@ const modal = document.createElement("div");
 export default modal;
 
 modal.classList.add("modal");
-modal.classList.add("active");
 const content = document.createElement("div");
 content.classList.add("modal__content");
-createModalContent("win", 12);
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeModal();
@@ -46,7 +44,7 @@ function createModalContent(text, movesCounter, onNewGame) {
     header.textContent = "Leaders";
     content.appendChild(header);
     const moves = document.createElement("span");
-    moves.textContent = `There are leaders`;
+    moves.textContent = `There are no leaders yet`;
     content.appendChild(moves);
     modal.appendChild(content);
   }

@@ -127,6 +127,8 @@
     gap: 1rem;
   }
   main .main__score-container .counter__container {
+    display: flex;
+    justify-content: center;
     width: 8rem;
     height: 4rem;
     padding: 0.5rem;
@@ -379,6 +381,8 @@
     gap: 1rem;
   }
   main .main__score-container .counter__container {
+    display: flex;
+    justify-content: center;
     width: 8rem;
     height: 4rem;
     padding: 0.5rem;
@@ -626,6 +630,8 @@
     gap: 1rem;
   }
   main .main__score-container .counter__container {
+    display: flex;
+    justify-content: center;
     width: 10rem;
     height: 5rem;
     padding: 0.5rem;
