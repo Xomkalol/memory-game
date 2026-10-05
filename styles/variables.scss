@@ -1,0 +1,77 @@
+:root {
+  --color-bg: #f4f7fb;
+  --color-bg-hover: #e2e5e9;
+  --color-surface: #ffffff;
+  --color-surface-soft: #eef3f8;
+
+  --color-primary: #e3350d;
+  --color-primary-hover: #c92d0b;
+  --color-primary-light: #fde8e3;
+
+  --color-text: #1f2937;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-text-on-primary: #ffffff;
+
+  --color-border: #dce4ec;
+  --color-border-light: #e8eef4;
+
+  --color-accent: #ffcb05;
+  --color-accent-hover: #e6b600;
+  --color-accent-light: #fff6cc;
+
+  --color-card: #ffffff;
+  --color-card-back: #e3350d;
+  --color-card-back-hover: #c92d0b;
+  --color-card-border: #dce4ec;
+
+  --color-success: #22c55e;
+  --color-success-light: #dcfce7;
+
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+
+  --color-border: #dce4ec;
+  --color-border-light: #e8eef4;
+
+  --color-overlay: rgb(15 23 42 / 60%);
+
+  --shadow-card: 0 4px 12px rgb(15 23 42 / 8%);
+  --shadow-card-hover: 0 8px 20px rgb(15 23 42 / 14%);
+  --shadow-modal: 0 20px 50px rgb(15 23 42 / 20%);
+}
+
+$font-family: Nunito;
+
+@mixin header-2 {
+  font-weight: 800;
+  font-family: $font-family;
+  font-size: 2rem;
+  color: var(--color-primary);
+
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
+}
+
+@mixin actions-button {
+  font-weight: 700;
+  font-family: $font-family;
+  color: var(--color-primary);
+  font-size: 1rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.75rem;
+  }
+}
+
+@mixin text {
+  font-weight: 600;
+  font-family: $font-family;
+  color: var(--color-text);
+  font-size: 1rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.75rem;
+  }
+}
