@@ -60,4 +60,5 @@
 
 .modal__button {
   @include assets.button;
+  @include variables.actions-button;
 }

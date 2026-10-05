@@ -861,5 +861,16 @@
     padding: 0.5rem;
   }
 }
+.modal__button {
+  font-weight: 700;
+  font-family: Nunito;
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .modal__button {
+    font-size: 0.75rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

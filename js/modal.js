@@ -27,7 +27,16 @@ function createModalContent(text, movesCounter) {
     const moves = document.createElement("span");
     moves.textContent = `you finished in ${movesCounter} moves`;
     content.appendChild(moves);
+
+    const newGame = document.createElement("button");
+    newGame.classList.add("modal__button");
+    newGame.textContent = "New game";
+    content.appendChild(newGame);
     modal.appendChild(content);
+
+    newGame.addEventListener("click", () => {
+      closeModal();
+    });
   }
 
   if (text === "leader") {
