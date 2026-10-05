@@ -12,11 +12,12 @@ const setUpHandlerforCards = (handleCardClick) => {
   });
 };
 
-const setUpHandlerNewGame = () => {
+const setUpHandlerNewGame = (newGame) => {
   const newGameButton = document.querySelector(".action__newgame");
 
   newGameButton.addEventListener("click", () => {
     console.log("start new game");
+    newGame();
   });
 };
 

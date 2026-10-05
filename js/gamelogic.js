@@ -8,6 +8,7 @@ import {
   setUpmoves,
 } from "./setupHandlers.js";
 import { createModalContent } from "./modal.js";
+import pokemon from "./pokemon.js";
 
 function initGame() {
   let moves = 0;
@@ -91,8 +92,21 @@ function initGame() {
       isLocked = true;
     }
   }
+
+  function newGame() {
+    moves = 0;
+    score = 0;
+    firstCard = "";
+    secondCard = "";
+    isLocked = false;
+    setUpmoves(moves);
+    setUpPairs(score);
+    const gridContainer = document.querySelector(".grid__container");
+    createCardsWith(gridContainer, pokemon);
+    setUpHandlerforCards(handleCardClick);
+  }
   setUpHandlerforCards(handleCardClick);
-  setUpHandlerNewGame();
+  setUpHandlerNewGame(newGame);
   setUpHandlerLeaderBoard();
   setUpHandlerReset();
   setUpPairs(score);
@@ -118,6 +132,8 @@ const createCardsWith = (gridContainer, pokemon) => {
   };
 
   shuffleCards(pokemonArray);
+
+  gridContainer.replaceChildren();
 
   for (let i = 0; i < pokemonArray.length; i += 1) {
     const cardContainer = document.createElement("div");
