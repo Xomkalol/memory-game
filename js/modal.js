@@ -2,17 +2,20 @@ const modal = document.createElement("div");
 export default modal;
 
 modal.classList.add("modal");
+modal.classList.add("active");
 const content = document.createElement("div");
 content.classList.add("modal__content");
-
+createModalContent("win", 12);
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    modal.classList.remove("active");
+    closeModal();
   }
 });
 
-modal.addEventListener("click", () => {
-  modal.classList.remove("active");
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
 });
 
 function createModalContent(text, movesCounter) {
