@@ -41,10 +41,16 @@ const setUpPairs = (score) => {
   resetButton.innerText = `${score} / 8`;
 };
 
+const setUpmoves = (moves) => {
+  const counterText = document.querySelector(".counter__moves");
+  counterText.innerText = `Moves: ${moves}`;
+};
+
 export {
   setUpHandlerforCards,
   setUpHandlerNewGame,
   setUpHandlerLeaderBoard,
   setUpHandlerReset,
   setUpPairs,
+  setUpmoves,
 };

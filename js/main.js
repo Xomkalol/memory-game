@@ -18,7 +18,7 @@ counterTextContainer.classList.add("counter__text-container");
 counterContainer.appendChild(counterTextContainer);
 
 const counterText = document.createElement("span");
-counterText.innerText = "Moves: 0";
+counterText.classList.add("counter__moves");
 counterTextContainer.appendChild(counterText);
 
 const counterResetButton = document.createElement("div");

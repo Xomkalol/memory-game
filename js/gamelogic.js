@@ -5,10 +5,11 @@ import {
   setUpHandlerLeaderBoard,
   setUpHandlerReset,
   setUpPairs,
+  setUpmoves,
 } from "./setupHandlers.js";
 
 function initGame() {
-  // let pairsCounter = 0;
+  let moves = 0;
   let score = 0;
   let firstCard = "";
   let secondCard = "";
@@ -44,10 +45,12 @@ function initGame() {
 
     if (firstCard.dataset.pokemonId == secondCard.dataset.pokemonId) {
       score++;
+      moves++;
       console.log(score);
       setMatchedCards.add(firstCard.querySelector(".card__inner"));
       setMatchedCards.add(secondCard.querySelector(".card__inner"));
       setUpPairs(score);
+      setUpmoves(moves);
       firstCard = "";
       secondCard = "";
       isLocked = false;
@@ -60,6 +63,8 @@ function initGame() {
       firstCard = "";
       secondCard = "";
       isLocked = false;
+      moves++;
+      setUpmoves(moves);
       resetActiveCards();
     }, 1000);
     return;
@@ -81,6 +86,7 @@ function initGame() {
   setUpHandlerLeaderBoard();
   setUpHandlerReset();
   setUpPairs(score);
+  setUpmoves(moves);
 }
 
 const createCardsWith = (gridContainer, pokemon) => {
