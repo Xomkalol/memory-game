@@ -22,6 +22,7 @@ counterText.innerText = "Moves: 0";
 counterTextContainer.appendChild(counterText);
 
 const counterResetButton = document.createElement("div");
+counterResetButton.classList.add("counter__reset-button");
 counterResetButton.innerText = "Reset";
 counterTextContainer.appendChild(counterResetButton);
 

@@ -25,9 +25,11 @@ actionContainer.classList.add("header__action-container");
 header.appendChild(actionContainer);
 
 const newGameButton = document.createElement("div");
+newGameButton.classList.add("action__newgame");
 newGameButton.textContent = "New game";
 actionContainer.appendChild(newGameButton);
 
 const leadersButton = document.createElement("div");
+leadersButton.classList.add("action__leaderboard");
 leadersButton.textContent = "Leaderboard";
 actionContainer.appendChild(leadersButton);

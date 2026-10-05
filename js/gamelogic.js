@@ -1,19 +1,16 @@
 export default initGame;
+import {
+  setUpHandlerforCards,
+  setUpHandlerNewGame,
+  setUpHandlerLeaderBoard,
+  setUpHandlerReset,
+} from "./setupHandlers.js";
 
 function initGame() {
-  const container = document.querySelectorAll(".card__container");
-
-  function addEventListenerCard(card) {
-    card.addEventListener("click", (event) => {
-      console.log("click");
-      const inner = event.currentTarget.querySelector(".card__inner");
-      inner.classList.toggle("active");
-    });
-  }
-
-  container.forEach((card) => {
-    addEventListenerCard(card);
-  });
+  setUpHandlerforCards();
+  setUpHandlerNewGame();
+  setUpHandlerLeaderBoard();
+  setUpHandlerReset();
 }
 
 const createCardsWith = (gridContainer, pokemon) => {
