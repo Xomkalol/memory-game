@@ -1,3 +1,5 @@
+import { createCardsWith } from "./gamelogic.js";
+import pokemon from "./pokemon.js";
 const grid = document.createElement("section");
 export default grid;
 
@@ -5,7 +7,9 @@ const gridContainer = document.createElement("div");
 gridContainer.classList.add("grid__container");
 grid.appendChild(gridContainer);
 
-for (let i = 0; i < 16; i += 1) {
+createCardsWith(gridContainer, pokemon);
+
+/* for (let i = 0; i < 16; i += 1) {
   const cardContainer = document.createElement("div");
   cardContainer.classList.add("card__container");
   gridContainer.appendChild(cardContainer);
@@ -27,3 +31,4 @@ for (let i = 0; i < 16; i += 1) {
   backCard.textContent = "Pokemon!";
   inner.appendChild(backCard);
 }
+ */
