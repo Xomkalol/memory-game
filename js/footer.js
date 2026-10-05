@@ -30,4 +30,4 @@ githubContainer.appendChild(githubLink);
 const githubImg = document.createElement("img");
 githubImg.alt = "github logo";
 githubImg.src = "./assets/github.png";
-githubContainer.appendChild(githubImg);
+githubLink.appendChild(githubImg);
