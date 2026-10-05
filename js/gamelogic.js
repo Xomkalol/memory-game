@@ -7,6 +7,7 @@ import {
   setUpPairs,
   setUpmoves,
 } from "./setupHandlers.js";
+import { createModalContent } from "./modal.js";
 
 function initGame() {
   let moves = 0;
@@ -86,7 +87,7 @@ function initGame() {
 
   function checkWinGame() {
     if (score === 8) {
-      console.log("YOU WON!");
+      createModalContent("win", moves);
       isLocked = true;
     }
   }
