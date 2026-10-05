@@ -18,11 +18,23 @@ function initGame() {
 
 const createCardsWith = (gridContainer, pokemon) => {
   const pokemonArray = [];
-  console.log(pokemon);
   for (let i = 0; i < pokemon.length; i++) {
     pokemonArray.push(pokemon[i]);
     pokemonArray.push(pokemon[i]);
   }
+
+  const shuffleCards = (array) => {
+    let arrayLength = array.length;
+    while (arrayLength) {
+      let randomElement = Math.floor(Math.random() * arrayLength--);
+      let temporaryElementToSwap = array[arrayLength];
+      array[arrayLength] = array[randomElement];
+      array[randomElement] = temporaryElementToSwap;
+    }
+    return array;
+  };
+
+  shuffleCards(pokemonArray);
 
   for (let i = 0; i < pokemonArray.length; i += 1) {
     const cardContainer = document.createElement("div");
@@ -55,5 +67,4 @@ const createCardsWith = (gridContainer, pokemon) => {
     inner.appendChild(backCard);
   }
 };
-
 export { createCardsWith };
