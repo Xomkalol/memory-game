@@ -4,17 +4,27 @@ import {
   setUpHandlerNewGame,
   setUpHandlerLeaderBoard,
   setUpHandlerReset,
+  setUpPairs,
 } from "./setupHandlers.js";
 
 function initGame() {
   // let pairsCounter = 0;
-  // let score = 0;
+  let score = 0;
   let firstCard = "";
   let secondCard = "";
   let isLocked = false;
+  const setMatchedCards = new Set();
 
   function handleCardClick(card) {
     if (isLocked) {
+      return;
+    }
+
+    if (setMatchedCards.has(card.querySelector(".card__inner"))) {
+      return;
+    }
+
+    if (firstCard === card) {
       return;
     }
     const inner = card.querySelector(".card__inner");
@@ -33,14 +43,22 @@ function initGame() {
     isLocked = true;
 
     if (firstCard.dataset.pokemonId == secondCard.dataset.pokemonId) {
-      console.log("Это пара!");
+      score++;
+      console.log(score);
+      setMatchedCards.add(firstCard.querySelector(".card__inner"));
+      setMatchedCards.add(secondCard.querySelector(".card__inner"));
+      setUpPairs(score);
+      firstCard = "";
+      secondCard = "";
+      isLocked = false;
+      return;
     } else {
       console.log("Это не пара!");
     }
-    firstCard = "";
-    secondCard = "";
 
     setTimeout(() => {
+      firstCard = "";
+      secondCard = "";
       isLocked = false;
       resetActiveCards();
     }, 1000);
@@ -52,13 +70,17 @@ function initGame() {
     const activeCards = gridContainer.querySelectorAll(".active");
 
     activeCards.forEach((card) => {
-      card.classList.toggle("active");
+      if (!setMatchedCards.has(card)) {
+        console.log(setMatchedCards.has(card));
+        card.classList.toggle("active");
+      }
     });
   }
   setUpHandlerforCards(handleCardClick);
   setUpHandlerNewGame();
   setUpHandlerLeaderBoard();
   setUpHandlerReset();
+  setUpPairs(score);
 }
 
 const createCardsWith = (gridContainer, pokemon) => {

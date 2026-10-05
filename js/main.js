@@ -37,7 +37,7 @@ scoreText.innerText = "Pairs:";
 scoreContainer.appendChild(scoreText);
 
 const scoreNumbers = document.createElement("span");
-scoreNumbers.innerText = "0 / 0";
+scoreNumbers.classList.add("score__number");
 scoreContainer.appendChild(scoreNumbers);
 
 main.appendChild(grid);

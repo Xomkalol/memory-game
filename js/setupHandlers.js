@@ -36,9 +36,15 @@ const setUpHandlerReset = () => {
   });
 };
 
+const setUpPairs = (score) => {
+  const resetButton = document.querySelector(".score__number");
+  resetButton.innerText = `${score} / 8`;
+};
+
 export {
   setUpHandlerforCards,
   setUpHandlerNewGame,
   setUpHandlerLeaderBoard,
   setUpHandlerReset,
+  setUpPairs,
 };
