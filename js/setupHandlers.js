@@ -18,7 +18,6 @@ const setUpHandlerNewGame = (newGame) => {
   const newGameButton = document.querySelector(".action__newgame");
 
   newGameButton.addEventListener("click", () => {
-    console.log("start new game");
     newGame();
   });
 };
@@ -28,7 +27,6 @@ const setUpHandlerLeaderBoard = () => {
 
   leaderboardButton.addEventListener("click", () => {
     createModalContent("leader", 0, () => {});
-    console.log("view leaderBoard");
   });
 };
 

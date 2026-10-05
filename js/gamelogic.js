@@ -34,11 +34,9 @@ function initGame() {
 
     if (firstCard === "") {
       firstCard = card;
-      console.log("Это первая карточка", firstCard);
       return;
     }
     secondCard = card;
-    console.log("Это вторая карточка", secondCard);
     if (firstCard === secondCard) {
       return;
     }
@@ -47,7 +45,6 @@ function initGame() {
     if (firstCard.dataset.pokemonId == secondCard.dataset.pokemonId) {
       score++;
       moves++;
-      console.log(score);
       setMatchedCards.add(firstCard.querySelector(".card__inner"));
       setMatchedCards.add(secondCard.querySelector(".card__inner"));
       setUpPairs(score);
@@ -57,8 +54,6 @@ function initGame() {
       isLocked = false;
       checkWinGame();
       return;
-    } else {
-      console.log("Это не пара!");
     }
 
     setTimeout(() => {
@@ -79,7 +74,6 @@ function initGame() {
 
     activeCards.forEach((card) => {
       if (!setMatchedCards.has(card)) {
-        console.log(setMatchedCards.has(card));
         card.classList.toggle("active");
       }
     });
