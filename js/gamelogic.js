@@ -16,7 +16,7 @@ function initGame() {
   let firstCard = "";
   let secondCard = "";
   let isLocked = false;
-  const setMatchedCards = new Set();
+  let setMatchedCards = new Set();
 
   function handleCardClick(card) {
     if (isLocked) {
@@ -88,7 +88,7 @@ function initGame() {
 
   function checkWinGame() {
     if (score === 8) {
-      createModalContent("win", moves);
+      createModalContent("win", moves, newGame);
       isLocked = true;
     }
   }
@@ -99,6 +99,7 @@ function initGame() {
     firstCard = "";
     secondCard = "";
     isLocked = false;
+    setMatchedCards = new Set();
     setUpmoves(moves);
     setUpPairs(score);
     const gridContainer = document.querySelector(".grid__container");

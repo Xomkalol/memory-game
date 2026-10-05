@@ -18,7 +18,7 @@ modal.addEventListener("click", (event) => {
   }
 });
 
-function createModalContent(text, movesCounter) {
+function createModalContent(text, movesCounter, onNewGame) {
   if (text === "win") {
     content.replaceChildren();
     const header = document.createElement("h2");
@@ -35,6 +35,7 @@ function createModalContent(text, movesCounter) {
     modal.appendChild(content);
 
     newGame.addEventListener("click", () => {
+      onNewGame();
       closeModal();
     });
   }
